@@ -54,6 +54,23 @@ def greedy_method(arr):
   return maximum
 
 
+def transform_and_conquer(arr):
+  arr.sort();
+  return arr[-1]
+
+
+def decrease_and_conquer(arr):
+  if(len(arr) == 1):
+    return arr[0]
+  
+  m_1 = max(arr[1:len(arr)])
+  return max(arr[0],m_1)
+
+
+print(decrease_and_conquer(arr));
+
+print(transform_and_conquer(arr));
+
 print(greedy_method(arr));
 
 print(dynamic_programming(arr));
